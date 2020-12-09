@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script type = "text/javascript" >
+   function difference()
+   {
+      var date1= new Date(document.getElementById('dateone').value);
+      var date2= new Date(document.getElementById('datetwo').value);
+      var difftime = date2.getTime() - date1.getTime();
+      var diffdays = difftime / (1000 * 3600 * 24);
+      alert("the difference between dates are : "+diffdays+" days");
+    }
+  </script>
+</head>
+<body>
+ <center>
+ <h1>Enter two dates to find No. of days between them</h1>
+ <h2>Select dates:</h2>
+</hr>
+ <table border="1">
+<tr>
+  <td>Date One: </td>
+  <td><input type="date" id="dateone"></td>
+</tr>
+<tr>
+  <td>Date two: </td>
+  <td><input type="date" id="datetwo"></td>
+</tr>
+<input type="button" id="but" value="Find" onclick="difference()"/>
+</table>
+</center>
+</body>
+</html>
